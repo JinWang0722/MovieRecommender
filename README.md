@@ -1,13 +1,11 @@
 # MovieRecommender
-=================HOW TO RUN MY CODE=====================
+=================HOW TO RUN PYTHON CODE=====================
 
 Type: python CodeName -f InputFileName -s MinSupport -c MinConfidence -r OutputFileName
 For example, if you wanna test my code on vote.arff, and set the minimum support and minimnum confidence both 0.5, and generate a output file named "1.txt"
 Type: python jin1.py -f vote.arff -s 0.5 -c 0.5 -r 1.txt, and press ENTER
 
-NOTE: the default input filename is "vote.arff", the default minimum support and confidence are both 0.5, the default output file name is "output_jin.txt"
-
-NOTE: when test some other dataset, please make sure that the format of the arff file must be exactly same as the vote.arff. Extra blank line may cause some error when read the data.
+NOTE: when test some other dataset, please make sure that the format of the input file must be exactly same as following. Extra blank line may cause some error when read the data.
 
 The format should be:
 @relation.....
@@ -21,34 +19,19 @@ n,y,n,y,.........
 
 
 =================File Description=========================
-There are 10 files and 2 folders for this assignment.
+There are 9 files for association rules part.
+jin1.py---------Use Yan's output file (utilize CF to fill the missing values) as input, genrate                      association rules.
+jin2.py---------Same as jin1.py, but output file is just support, confidence, and lift. Use this                     output file to plot the scatter graph in matlab.
+jin3.py---------Use raw data (ratings.csv) as input file, generate association rules.
+jin4.py---------Same as jin3.py, but output file is just support, confidence, and lift. Use this                     output file to plot the scatter graph in matlab.
 
-Screenshot------All original file of screenshots in report are kept in this folder. Since there is a resolution problem, the screenshots in the report may not be 		very clear.
+RatingTrans.java & RatingTrans2.java -----Preprocessing for the raw data.
 
-txtOutput-------All generated output files are kept here. 01.txt~ 03.txt are the results of Test_1.arff ~ Test_3.arff
-		plot01.txt ~ plot10.txt are results of FigureB in report.
-	        
-jin1.py---------Python code for programming part. Will print the result and output an txt file.
-
-jin2.py---------Python code for programming part. Will only print the runtime and rule number. It will output a same txt file as jin1.py. 
-                jin2.py comments most of the print instructions to achieve a better performance.
-
-plot.xlsx-------The original file for generating the plot figure.
-
-Wang_Kurupalli.pdf------The report for this assignment with contribution form.
-
-Test_1.arff-----The test case 1 in report. small data set.
-
-Tsst_2.arff-----The test case 2 in report. medimum data set.
-
-Test_3.arff-----The test case 3 in report. large data set.
-
-Test_for_plot.arff-----The test case for plot part in report.
-
-vote.arff-------A provided dataset. 
+trans.m & trans2.m------------------------Preprocessing for Yan's output file. Yan did his CF part by using matlab, and finally his program would output a file (a .mat file). Therefore, I need to use matlab to do the preprocess. 
 
 README----------Description. 
 
+Since the data file after preprocessing 
 ================================================================
 
 
